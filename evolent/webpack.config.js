@@ -1,19 +1,10 @@
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
-const webpack = require("webpack");
 // const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 const path = require("path");
-const dotenv = require("dotenv");
 
 module.exports = () => {
-  const env = dotenv.config().parsed;
-
-  const envKeys = Object.keys(env).reduce((prev, next) => {
-    prev[`process.env.${next}`] = JSON.stringify(env[next]);
-    return prev;
-  }, {});
-
   return {
     entry: "./src/index.tsx",
     output: {
@@ -56,11 +47,9 @@ module.exports = () => {
       ],
     },
     plugins: [
-      new webpack.DefinePlugin(envKeys),
       new CleanWebpackPlugin(),
       new HtmlWebpackPlugin({
         template: "./public/index.html",
-        publicPath: process.env.PUBLIC_URL,
         favicon: "./public/favicon.ico",
       }),
       // new CopyWebpackPlugin({
