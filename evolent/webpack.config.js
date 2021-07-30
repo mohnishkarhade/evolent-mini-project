@@ -12,7 +12,7 @@ module.exports = () => {
       path: path.resolve(__dirname, "dist"),
     },
     mode: process.env.NODE_ENV,
-    devtool: "inline-source-map",
+    //devtool: "inline-source-map",
     devServer: {
       contentBase: "./dist",
       historyApiFallback: true,
