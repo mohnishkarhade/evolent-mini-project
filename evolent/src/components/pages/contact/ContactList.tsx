@@ -7,7 +7,7 @@ import "./styles.scss";
 
 const contactService = ServiceFactory.GetEmployeeService();
 
-const ContactList = () => {
+const ContactList = (props) => {
   const [contacts, setContacts] = useState([]);
 
   useEffect(() => {
@@ -20,6 +20,10 @@ const ContactList = () => {
     });
   };
 
+  const handleAddContact = () => {
+    props.history.push("add-contact");
+  };
+
   return (
     <div className="row">
       <div className="col-sm-12">
@@ -29,7 +33,7 @@ const ContactList = () => {
           </div>
           <div className="page__content">
             <div>
-              <Button color="primary" size="sm">
+              <Button color="primary" size="sm" onClick={handleAddContact}>
                 Add Contact
               </Button>
             </div>
