@@ -1,4 +1,4 @@
-import NativeDialog from "../dialogbox/NativeDialogbox";
+import NativeDialog from "../dialogBox/nativeDialog";
 
 let env = "Native";
 
