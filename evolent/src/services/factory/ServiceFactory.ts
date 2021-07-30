@@ -4,7 +4,7 @@ import MockContactServices from "../contact/mockContactService";
 let env = "mock-data-test";
 
 class ServiceFactory {
-  GetEmployeeService() {
+  GetContactService() {
     switch (env) {
       case "development":
         return ContactService;

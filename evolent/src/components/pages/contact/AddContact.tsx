@@ -3,7 +3,7 @@ import { useState } from "react";
 import ContactForm from "./parts/ContactForm";
 import ServiceFactory from "../../../services/factory/ServiceFactory";
 
-const contactService = ServiceFactory.GetEmployeeService();
+const contactService = ServiceFactory.GetContactService();
 
 const initialContact = {
   id: 0,

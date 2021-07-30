@@ -1,4 +1,4 @@
-import NativeDialogbox from "../dialogbox/NativeDialogbox";
+import NativeDialog from "../dialogbox/NativeDialogbox";
 
 let env = "Native";
 
@@ -12,10 +12,10 @@ class UiFactory {
         throw new Error("Not implemented");
 
       case "Native":
-        return NativeDialogbox;
+        return NativeDialog;
 
       default:
-        return NativeDialogbox;
+        return NativeDialog;
     }
   }
 }

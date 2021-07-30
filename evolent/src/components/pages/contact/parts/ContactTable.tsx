@@ -41,14 +41,30 @@ const ContactTable = (props) => {
             <td>{contact.lastName}</td>
             <td>{contact.phoneNo}</td>
             <td>{contact.email}</td>
-            <td>{contact.isActive}</td>
+            <td>
+              {contact.isActive ? (
+                <label className="badge badge-success">Active</label>
+              ) : (
+                <label className="badge badge-secondary">In Active</label>
+              )}
+            </td>
 
             <td>
-              <Button color="link" size="sm" className="text-success">
+              <Button
+                color="link"
+                size="sm"
+                className="text-success"
+                onClick={() => props.onEdit(contact.id)}
+              >
                 <FontAwesomeIcon icon={faEdit} />
               </Button>
               &nbsp;
-              <Button color="link" size="sm" className="text-danger">
+              <Button
+                color="link"
+                size="sm"
+                className="text-danger"
+                onClick={() => props.onDelete(contact.id)}
+              >
                 <FontAwesomeIcon icon={faTrash} />
               </Button>
             </td>

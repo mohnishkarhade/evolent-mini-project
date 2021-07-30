@@ -1,12 +1,12 @@
-class NativeDialogbox {
+class NativeDialog {
   alert(message, callback) {
     alert(message);
   }
 
-  confirm(title, message, cancelLabel, confirmLabel, callback) {
+  confirm(title, message?, cancelLabel?, confirmLabel?, callback?) {
     var result = window.confirm(title);
     return result;
   }
 }
 
-export default new NativeDialogbox();
+export default new NativeDialog();

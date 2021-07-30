@@ -28,10 +28,10 @@ class MockContactServices {
     tempContact.id = contact.id;
     tempContact.firstName = contact.firstName;
     tempContact.lastName = contact.lastName;
-    tempContact.dob = contact.dob;
-    tempContact.designation = contact.designation;
+    tempContact.phoneNo = contact.phoneNo;
+    tempContact.email = contact.email;
     tempContact.photo = contact.photo;
-    tempContact.experiance = contact.experiance;
+    tempContact.isActive = contact.isActive;
 
     return Promise.resolve("success");
   }

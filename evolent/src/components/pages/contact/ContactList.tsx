@@ -4,8 +4,10 @@ import { Button } from "reactstrap";
 import ContactTable from "./parts/ContactTable";
 import ServiceFactory from "../../../services/factory/ServiceFactory";
 import "./styles.scss";
+import uiFactory from "../../../utilities/ui/factory/uiFactory";
 
-const contactService = ServiceFactory.GetEmployeeService();
+const contactService = ServiceFactory.GetContactService();
+const dialogBox = uiFactory.GetDialogBox();
 
 const ContactList = (props) => {
   const [contacts, setContacts] = useState([]);
@@ -21,7 +23,19 @@ const ContactList = (props) => {
   };
 
   const handleAddContact = () => {
-    props.history.push("add-contact");
+    props.history.push("/add-contact");
+  };
+
+  const handleEditContact = (id) => {
+    props.history.push(`/edit-contact/${id}`);
+  };
+
+  const handleDelete = (id) => {
+    if (dialogBox.confirm("Are you sure?")) {
+      contactService.delete(id).then((res) => {
+        setContacts(contacts.filter((x: any) => x.id !== id));
+      });
+    }
   };
 
   return (
@@ -38,7 +52,11 @@ const ContactList = (props) => {
               </Button>
             </div>
             <div className="contacts">
-              <ContactTable contacts={contacts} />
+              <ContactTable
+                contacts={contacts}
+                onDelete={handleDelete}
+                onEdit={handleEditContact}
+              />
             </div>
           </div>
         </section>

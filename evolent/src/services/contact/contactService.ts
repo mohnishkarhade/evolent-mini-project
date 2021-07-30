@@ -1,6 +1,6 @@
 import DataAccessFactory from "../../utilities/data-access/factory/dataAccessFactory";
 
-const CONTACT_API_BASE_URL = "http://localhost:8080/employees";
+const CONTACT_API_BASE_URL = "http://localhost:8080/contacts";
 
 const DataAccess = DataAccessFactory.GetDataAccessService();
 

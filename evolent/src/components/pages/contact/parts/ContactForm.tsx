@@ -4,7 +4,7 @@ import { Button, Form, FormGroup, Input, Label } from "reactstrap";
 import ProfilePhoto from "../../../common/ProfilePhoto";
 
 const ContactForm = (props) => {
-  const firstNameRef = useRef(null);
+  const firstNameRef: any = useRef(null);
 
   useEffect(() => {
     firstNameRef.current && firstNameRef.current.focus();
@@ -89,9 +89,18 @@ const ContactForm = (props) => {
           />
         </div>
       </FormGroup>
-      <FormGroup>
-        <Label>Active:</Label>
+      <FormGroup check>
+        <Label check>
+          <Input
+            type="checkbox"
+            name="isActive"
+            checked={props.contact.isActive}
+            onChange={props.onChange}
+          />
+          Active
+        </Label>
       </FormGroup>
+      <br />
       <Button color="success" onClick={props.onSave}>
         Save
       </Button>
