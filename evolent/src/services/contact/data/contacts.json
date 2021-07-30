@@ -6,6 +6,7 @@
       "lastName": "Anderson",
       "phoneNo": "999998888",
       "email": "jack@hotmail.com",
+      "isActive": true,
       "photo": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
     },
     {
@@ -14,7 +15,8 @@
       "lastName": "Anderson",
       "phoneNo": "999998888",
       "email": "jill@gmail.com",
-      "photo": "http://shahjis.in/wp-content/uploads/2021/02/sun-spots.jpeg"
+      "isActive": true,
+      "photo": ""
     },
     {
       "id": 3,
@@ -22,6 +24,7 @@
       "lastName": "Anderson",
       "phoneNo": "999998888",
       "email": "Manager",
+      "isActive": true,
       "photo": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
     },
     {
@@ -30,6 +33,7 @@
       "lastName": "Anderson",
       "phoneNo": "999998888",
       "email": "CEO",
+      "isActive": true,
       "photo": "http://shahjis.in/wp-content/uploads/2021/02/sun-spots.jpeg"
     },
     {
@@ -38,6 +42,7 @@
       "lastName": "Anderson",
       "phoneNo": "999998888",
       "email": "Manager",
+      "isActive": true,
       "photo": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
     },
     {
@@ -46,6 +51,7 @@
       "lastName": "Anderson",
       "phoneNo": "999998888",
       "email": "CEO",
+      "isActive": true,
       "photo": "http://shahjis.in/wp-content/uploads/2021/02/sun-spots.jpeg"
     },
     {
@@ -54,6 +60,7 @@
       "lastName": "Anderson",
       "phoneNo": "999998888",
       "email": "Manager",
+      "isActive": true,
       "photo": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
     },
     {
@@ -62,15 +69,17 @@
       "lastName": "Anderson",
       "phoneNo": "999998888",
       "email": "CEO",
+      "isActive": true,
       "photo": "http://shahjis.in/wp-content/uploads/2021/02/sun-spots.jpeg"
     },
     {
       "id": 9,
-      "firstName": "Jack",
-      "lastName": "Anderson",
+      "firstName": "Mike",
+      "lastName": "Tyson",
       "phoneNo": "999998888",
       "email": "Manager",
-      "photo": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
+      "isActive": true,
+      "photo": ""
     }
   ]
 }
